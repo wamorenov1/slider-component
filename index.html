@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Accesibility Slider</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+    *:focus {
+      outline: 2px solid rgb(255, 136, 0);
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .bfix {
+      border: 2px solid red;
+    }
+
+    .control-buttons-slider {
+      position: absolute;
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+      display: flex;
+      top: 35%;
+      height: 20%;
+    }
+
+    .position-box-buttons {
+      position: fixed;
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      padding: 0rem;
+      color: transparent;
+    }
+
+    .position-box-buttons a {
+      background-color: transparent;
+      height: 100%;
+      padding: 3rem 1rem;
+    }
+
+    .position-box-buttons a i {
+      color: rgba(255, 102, 0, 0.4);
+      font-size: 3.5rem;
+    }
+
+    .list-slider {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+
+    .slider-item {
+      position: relative;
+      width: 100%;
+    }
+    .slider-item a {
+      text-decoration: none;
+      color: #000000;
+    }
+    .slider-item img {
+      width: 100vw;
+      min-height: 35vh;
+      object-fit: cover;
+    }
+
+    .slider-body {
+      width: 100%;
+      bottom: 0;
+    }
+
+    .body-content-slider h2 {
+      font-weight: 700;
+    }
+    .body-content-slider p {
+      font-weight: 300;
+    }
+
+    .body-content-slider {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #f7f7f7;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .btn-slider {
+      background-color: #f60;
+      color: #FFF;
+      font-weight: 700;
+    }
+
+    .custom-slider {
+      position: relative;
+      overflow: scroll;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="custom-slider" role="region" aria-label="Slider">
+      <div class="control-buttons-slider">
+        <div class="position-box-buttons">
+          <a id="btn-slider-left" aria-label="Botón slider atrás"  href="javascript:;"><i class="fas fa-chevron-left"></i></a>
+          <a id="btn-slider-right" aria-label="Botón slider adelante"  href="javascript:;"><i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+      <ul class="list-slider">
+        <li class="slider-item">
+          <a href="#">
+            <img title="imagen-banner"
+              src="https://corporativo.compensar.com/PublishingImages/Banner/banner-home/Ene2022-covid.webp" alt="Primer Slider">
+            <article class="slider-body">
+              <div class="body-content-slider">
+                <h2>Ruta de atención COVID</h2>
+                <p>Recuerda la ruta de atención covid. Detectar a tiempo ayuda a frenar la ola de contagios, si
+                  presentas síntomas o tienes sospecha, activa la ruta de atención.</p>
+                <p class="btn btn-slider">Más sobre COVID</p>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="slider-item">
+          <a href="#">
+            <img
+              src="https://corporativo.compensar.com/PublishingImages/Banner/banner-home/Feb2022-vivienda-montecielo.webp"
+              alt="Segundo Slider">
+            <article class="slider-body">
+              <div class="body-content-slider">
+                <h2>Te invitamos a nuestra nueva sala de negocios</h2>
+                <p>Acércate a Montecielo y conoce un nuevo espacio que te ayudará a cumplir tu sueño de tener vivienda
+                  nueva.</p>
+                <p class="btn btn-slider">Información proyecto Montecielo</p>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="slider-item">
+          <a href="#">
+            <img src="https://corporativo.compensar.com/PublishingImages/Banner/banner-home/Feb2022-sede-fusa.webp"
+              alt="Tercer Slider">
+            <article class="slider-body">
+              <div class="body-content-slider">
+                <h2>¿Sabías que abrimos una nueva sede enfocada en el adulto mayor?</h2>
+                <p>Está ubicada en Fusagasugá y con ella incluimos servicios de estadía con el centro de permanencia.
+                </p>
+                <p class="btn btn-slider">Información sede Fusagasugá</p>
+              </div>
+            </article>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <main>
+    <!-- <div class="container">
+      <h1>Hola mundo</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reprehenderit totam laboriosam quaerat
+        consequatur suscipit eligendi earum id, qui, est nihil sapiente, veniam animi quibusdam ea! Debitis laudantium
+        quam ab?</p>
+        <a href="#">Otro enlace</a>
+    </div> -->
+  </main>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+
+  <script>
+    let btnSliderLeft = document.getElementById('btn-slider-left');
+    let btnSliderRight = document.getElementById('btn-slider-right');
+    console.log(btnSliderLeft)
+    console.log(btnSliderRight)
+
+    
+  </script>
+</body>
+
+</html>
